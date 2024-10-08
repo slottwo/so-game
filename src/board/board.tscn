@@ -1,3 +1,149 @@
-[gd_scene format=3 uid="uid://bnt0xksdt0aam"]
+[gd_scene load_steps=4 format=3 uid="uid://bnt0xksdt0aam"]
+
+[ext_resource type="Script" path="res://src/board/board.gd" id="1_0a6y0"]
+[ext_resource type="PackedScene" uid="uid://duijfl6oc7qtx" path="res://src/card/card.tscn" id="1_d4gy0"]
+[ext_resource type="Texture2D" uid="uid://dwfh33km3et6y" path="res://assets/cards/Front_Sample.png" id="2_0na2h"]
 
 [node name="Board" type="Node2D"]
+script = ExtResource("1_0a6y0")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1090.0
+offset_bottom = 630.0
+
+[node name="Row1" type="Control" parent="Control"]
+anchors_preset = 0
+
+[node name="Card" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+Front = ExtResource("2_0na2h")
+
+[node name="Card2" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(110, 0)
+
+[node name="Card3" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(220, 0)
+
+[node name="Card4" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(330, 0)
+
+[node name="Card5" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(440, 0)
+
+[node name="Card6" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(550, 0)
+
+[node name="Card7" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(660, 0)
+
+[node name="Card8" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(770, 0)
+
+[node name="Card9" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(880, 0)
+
+[node name="Card10" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+position = Vector2(990, 0)
+
+[node name="Row2" type="Control" parent="Control"]
+anchors_preset = 0
+offset_top = 160.0
+offset_bottom = 160.0
+
+[node name="Card" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+
+[node name="Card2" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(110, 0)
+
+[node name="Card3" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(220, 0)
+
+[node name="Card4" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(330, 0)
+
+[node name="Card5" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(440, 0)
+
+[node name="Card6" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(550, 0)
+
+[node name="Card7" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(660, 0)
+
+[node name="Card8" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(770, 0)
+
+[node name="Card9" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(880, 0)
+
+[node name="Card10" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+position = Vector2(990, 0)
+
+[node name="Row3" type="Control" parent="Control"]
+anchors_preset = 0
+offset_top = 320.0
+offset_bottom = 320.0
+
+[node name="Card" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+
+[node name="Card2" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(110, 0)
+
+[node name="Card3" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(220, 0)
+
+[node name="Card4" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(330, 0)
+
+[node name="Card5" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(440, 0)
+
+[node name="Card6" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(550, 0)
+
+[node name="Card7" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(660, 0)
+
+[node name="Card8" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(770, 0)
+
+[node name="Card9" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(880, 0)
+
+[node name="Card10" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+position = Vector2(990, 0)
+
+[node name="Row4" type="Control" parent="Control"]
+anchors_preset = 0
+offset_top = 480.0
+offset_bottom = 480.0
+
+[node name="Card" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+
+[node name="Card2" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(110, 0)
+
+[node name="Card3" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(220, 0)
+
+[node name="Card4" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(330, 0)
+
+[node name="Card5" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(440, 0)
+
+[node name="Card6" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(550, 0)
+
+[node name="Card7" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(660, 0)
+
+[node name="Card8" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(770, 0)
+
+[node name="Card9" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(880, 0)
+
+[node name="Card10" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+position = Vector2(990, 0)

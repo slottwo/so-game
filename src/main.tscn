@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://b7a5w40q8gnc"]
+[gd_scene load_steps=3 format=3 uid="uid://b7a5w40q8gnc"]
+
+[ext_resource type="Texture2D" uid="uid://bemyg50c4j2fc" path="res://assets/bg/felt-1.jpg" id="1_s44av"]
+[ext_resource type="PackedScene" uid="uid://bnt0xksdt0aam" path="res://src/board/board.tscn" id="1_skn6w"]
 
 [node name="Main" type="Node2D"]
+
+[node name="BackGround" type="Node2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGround"]
+position = Vector2(2500, 1666.5)
+texture = ExtResource("1_s44av")
+
+[node name="Board" parent="." instance=ExtResource("1_skn6w")]
