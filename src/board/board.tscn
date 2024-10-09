@@ -10,13 +10,15 @@ script = ExtResource("1_0a6y0")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1090.0
-offset_bottom = 630.0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 1097.0
+offset_bottom = 632.0
 
 [node name="Row1" type="Control" parent="Control"]
 anchors_preset = 0
 
-[node name="Card" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
+[node name="Card1" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
 Front = ExtResource("2_0na2h")
 
 [node name="Card2" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
@@ -51,7 +53,7 @@ anchors_preset = 0
 offset_top = 160.0
 offset_bottom = 160.0
 
-[node name="Card" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
+[node name="Card1" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
 
 [node name="Card2" parent="Control/Row2" instance=ExtResource("1_d4gy0")]
 position = Vector2(110, 0)
@@ -85,7 +87,7 @@ anchors_preset = 0
 offset_top = 320.0
 offset_bottom = 320.0
 
-[node name="Card" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
+[node name="Card1" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
 
 [node name="Card2" parent="Control/Row3" instance=ExtResource("1_d4gy0")]
 position = Vector2(110, 0)
@@ -119,7 +121,7 @@ anchors_preset = 0
 offset_top = 480.0
 offset_bottom = 480.0
 
-[node name="Card" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
+[node name="Card1" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
 
 [node name="Card2" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
 position = Vector2(110, 0)
