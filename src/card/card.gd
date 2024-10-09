@@ -3,11 +3,15 @@ extends Node2D
 @export var Front: Texture2D
 
 var sprite:Sprite2D
+var nodeFront:Node2D
+
+var id 
 @onready var CardCLick: Button = $Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Button/Control/Front.visible = false
+	nodeFront = $Button/Control/Front
+	nodeFront.visible = false
 	sprite = $Button/Control/Front/Sprite2D
 	sprite.set_texture(Front)
 

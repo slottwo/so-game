@@ -1,18 +1,24 @@
 extends Node2D
 
 var folder_path = "res://assets/cards/front/"
-
+var timer 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var vetorImgs = carregaImgs()
 	vetorImgs = geraVetorAleatorioImgs(vetorImgs)
 	carregaTexturaNasCartas(vetorImgs)
 	
+	timer = Timer.new()  # Cria um novo Timer
+	add_child(timer)  # Adiciona o Timer como filho
+	timer.wait_time = 1  # Define o tempo de espera
+	timer.one_shot = true  # O Timer será disparado apenas uma vez
 
 
 func _process(delta: float) -> void:
 	#position = (get_viewport_rect().size - $Control.size)/2
 	$Control.scale = (get_viewport_rect().size / $Control.size) * 0.99
+	
+
 
 func carregaImgs() -> Array:
 	var saida = []
@@ -26,7 +32,15 @@ func carregaImgs() -> Array:
 				continue
 			var image_path = folder_path + file_name
 			var image = load(image_path)
-			saida.append(image)
+			
+			var index
+			if "_" in file_name:
+				index = file_name.find("_")
+			else:
+				index = file_name.find(".")
+			file_name = file_name.substr(0, index)
+			
+			saida.append([image,file_name])
 			file_name = dir.get_next()
 			
 		return saida
@@ -48,5 +62,42 @@ func carregaTexturaNasCartas(vetorImg:Array) -> void:
 			var card = row.get_node("Card" + str(j))
 			if vetorImg.is_empty():
 				return
-			card.sprite.set_texture(vetorImg.pop_front())
+			var elemento = vetorImg.pop_front()
+			card.sprite.set_texture(elemento[0])
+			card.id = elemento[1]
 			card.ajustar_sprite_para_carta()
+
+func verificaCartasViradas():
+	var cartasViradas = []
+	for row in $Control.get_children():  
+		for card in row.get_children():  
+			if card.nodeFront.visible:
+				cartasViradas.append(card)
+	return cartasViradas
+
+func verificaParCartas(cartasViradas:Array):
+	if cartasViradas.size() == 2:
+		if cartasViradas[0].id == cartasViradas[1].id:
+			timer.start() 
+			await timer.timeout  
+			cartasViradas[0].queue_free()
+			cartasViradas[1].queue_free()
+			return []
+	return cartasViradas
+
+
+func desviraCartas(cartasViradas:Array):
+	if cartasViradas.size() == 2:
+		timer.start() 
+		await timer.timeout  
+		cartasViradas[0].nodeFront.visible = false
+		cartasViradas[1].nodeFront.visible = false
+
+
+func _on_control_gui_input(event: InputEvent) -> void:
+	get_tree().paused = true
+	var cartasViradas = verificaCartasViradas()
+	cartasViradas = await verificaParCartas(cartasViradas)
+	await desviraCartas(cartasViradas)
+	get_tree().paused = false
+	

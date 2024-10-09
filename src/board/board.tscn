@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dwfh33km3et6y" path="res://assets/cards/Front_Sample.png" id="2_0na2h"]
 
 [node name="Board" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_0a6y0")
 
 [node name="Control" type="Control" parent="."]
@@ -149,3 +150,5 @@ position = Vector2(880, 0)
 
 [node name="Card10" parent="Control/Row4" instance=ExtResource("1_d4gy0")]
 position = Vector2(990, 0)
+
+[connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]
