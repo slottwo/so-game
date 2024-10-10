@@ -10,13 +10,17 @@ func _ready() -> void:
 	
 	timer = Timer.new()  # Cria um novo Timer
 	add_child(timer)  # Adiciona o Timer como filho
-	timer.wait_time = 1  # Define o tempo de espera
+	timer.wait_time = 2  # Define o tempo de espera
 	timer.one_shot = true  # O Timer será disparado apenas uma vez
 
 
 func _process(delta: float) -> void:
 	#position = (get_viewport_rect().size - $Control.size)/2
 	$Control.scale = (get_viewport_rect().size / $Control.size) * 0.99
+	
+	var cartasViradas = verificaCartasViradas()
+	cartasViradas = verificaParCartas(cartasViradas)
+	desviraCartas(cartasViradas)
 	
 
 
@@ -56,10 +60,8 @@ func geraVetorAleatorioImgs(vetorImgs:Array) -> Array:
 	return saida
 
 func carregaTexturaNasCartas(vetorImg:Array) -> void:
-	for i in range(1, 5):  # 1 a 4
-		var row = $Control.get_node("Row" + str(i))  
-		for j in range(1, 11):  # 1 a 10
-			var card = row.get_node("Card" + str(j))
+	for row in $Control.get_children():  
+		for card in  row.get_children():  
 			if vetorImg.is_empty():
 				return
 			var elemento = vetorImg.pop_front()
@@ -76,28 +78,22 @@ func verificaCartasViradas():
 	return cartasViradas
 
 func verificaParCartas(cartasViradas:Array):
-	if cartasViradas.size() == 2:
-		if cartasViradas[0].id == cartasViradas[1].id:
-			timer.start() 
-			await timer.timeout  
+	if cartasViradas.size() == 2 and timer.is_stopped():
+		if cartasViradas[0].id == cartasViradas[1].id:  
 			cartasViradas[0].queue_free()
 			cartasViradas[1].queue_free()
 			return []
+	elif timer.is_stopped():
+		timer.start() 
 	return cartasViradas
 
 
 func desviraCartas(cartasViradas:Array):
-	if cartasViradas.size() == 2:
-		timer.start() 
-		await timer.timeout  
+	if cartasViradas.size() == 2  and timer.is_stopped():
 		cartasViradas[0].nodeFront.visible = false
 		cartasViradas[1].nodeFront.visible = false
 
 
 func _on_control_gui_input(event: InputEvent) -> void:
-	get_tree().paused = true
-	var cartasViradas = verificaCartasViradas()
-	cartasViradas = await verificaParCartas(cartasViradas)
-	await desviraCartas(cartasViradas)
-	get_tree().paused = false
+	pass
 	
