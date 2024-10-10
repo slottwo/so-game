@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d15kk4xcswtg0"
-path="res://.godot/imported/5-key.png-655904d87388c69a4656b7362455c985.ctex"
+uid="uid://3rv3f78atvc8"
+path="res://.godot/imported/RAID_4.svg-495c60b26512799492f5014654c323e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/front/5-key.png"
-dest_files=["res://.godot/imported/5-key.png-655904d87388c69a4656b7362455c985.ctex"]
+source_file="res://assets/img/RAID_4.svg"
+dest_files=["res://.godot/imported/RAID_4.svg-495c60b26512799492f5014654c323e8.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
