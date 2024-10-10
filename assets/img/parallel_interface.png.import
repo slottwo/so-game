@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7wxqmudirads"
-path="res://.godot/imported/diagrama-serial.svg-0202c362a762c47f36b6783275313c0b.ctex"
+uid="uid://cke07tqfrmore"
+path="res://.godot/imported/parallel_interface.png-15c7cf35595990b9fa983fcd5859e86a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/samples/diagrama-serial.svg"
-dest_files=["res://.godot/imported/diagrama-serial.svg-0202c362a762c47f36b6783275313c0b.ctex"]
+source_file="res://assets/img/parallel_interface.png"
+dest_files=["res://.godot/imported/parallel_interface.png-15c7cf35595990b9fa983fcd5859e86a.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

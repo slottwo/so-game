@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgtmn8lxo5uvc"
-path="res://.godot/imported/diagrama-paralelo.svg-1d92bf254a9a5755ffe7195d3cba80aa.ctex"
+uid="uid://r3ijf1vt6ypy"
+path="res://.godot/imported/serial_diagram.svg-de322df23d66ff32f2c2c3ec537bc90f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/samples/diagrama-paralelo.svg"
-dest_files=["res://.godot/imported/diagrama-paralelo.svg-1d92bf254a9a5755ffe7195d3cba80aa.ctex"]
+source_file="res://assets/img/serial_diagram.svg"
+dest_files=["res://.godot/imported/serial_diagram.svg-de322df23d66ff32f2c2c3ec537bc90f.ctex"]
 
 [params]
 

@@ -16,7 +16,6 @@ func _ready() -> void:
 	sprite.set_texture(Front)
 
 
-
 func ajustar_sprite_para_carta():
 	var carta_size = Vector2(100,150)
 	var texture_size = sprite.get_rect().size  

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwfh33km3et6y"
-path="res://.godot/imported/Front_Sample.png-802019319e3f28bf77a0ef36f703dd9f.ctex"
+uid="uid://bt5uiuthlyq16"
+path="res://.godot/imported/serial_interface.png-7866df9bfd4955d1976736f7e90aa4a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cards/Front_Sample.png"
-dest_files=["res://.godot/imported/Front_Sample.png-802019319e3f28bf77a0ef36f703dd9f.ctex"]
+source_file="res://assets/img/serial_interface.png"
+dest_files=["res://.godot/imported/serial_interface.png-7866df9bfd4955d1976736f7e90aa4a5.ctex"]
 
 [params]
 

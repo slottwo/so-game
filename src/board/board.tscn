@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnt0xksdt0aam"]
+[gd_scene load_steps=3 format=3 uid="uid://bnt0xksdt0aam"]
 
 [ext_resource type="Script" path="res://src/board/board.gd" id="1_0a6y0"]
 [ext_resource type="PackedScene" uid="uid://duijfl6oc7qtx" path="res://src/card/card.tscn" id="1_d4gy0"]
-[ext_resource type="Texture2D" uid="uid://dwfh33km3et6y" path="res://assets/cards/Front_Sample.png" id="2_0na2h"]
 
 [node name="Board" type="Node2D"]
 process_mode = 3
@@ -20,7 +19,6 @@ offset_bottom = 632.0
 anchors_preset = 0
 
 [node name="Card1" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
-Front = ExtResource("2_0na2h")
 
 [node name="Card2" parent="Control/Row1" instance=ExtResource("1_d4gy0")]
 position = Vector2(110, 0)
